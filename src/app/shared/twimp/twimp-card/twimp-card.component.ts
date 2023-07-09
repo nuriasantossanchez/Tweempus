@@ -9,4 +9,9 @@ import {Twimp} from '../twimp.model';
 export class TwimpCardComponent {
   @Input() twimp!: Twimp;
 
+  isFavorite(favorite: boolean) {
+    this.twimp.favorite = !favorite;
+    // window.alert(this.twimp.favorite);
+  }
+
 }
