@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { LoginModule } from './login/login.module';
 import { ProfileModule } from './profile/profile.module';
+import { ErrorModule } from './error/error.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,12 +15,12 @@ import { ProfileModule } from './profile/profile.module';
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
     AppRoutingModule,
     LoginModule,
     DashboardModule,
     ProfileModule,
+    ErrorModule,
   ],
 })
 export class AppModule {}
