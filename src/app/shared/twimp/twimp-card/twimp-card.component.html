@@ -18,10 +18,12 @@
   <hr class="twimp_line" />
 
   <div class="twimp_fav">
-    <a
+    <!-- <a
       [ngClass]="twimp.favorite ? 'fav_icon fav_icon-selected' : 'fav_icon'"
       (click)="isFavorite(twimp.favorite)"
       >&#10084;</a
-    >
+    > -->
+
+    <a class="fav_icon" [ngClass]="{'fav_icon-selected': twimp.favorite}"  href="#">&#10084;</a>
   </div>
 </section>
