@@ -1,4 +1,4 @@
-<section class="setion_menu">
+<section class="setion_menu" *ngIf="checkLogin()">
   <nav class="menu_nav">
     <ul class="nav_list">
       <!-- <li class="nav_list_item nav_list_item-selected"> -->
@@ -6,7 +6,8 @@
         <a class="nav_list_link" routerLink="/dashboard">Twimp</a>
       </li>
       <li class="nav_list_item" routerLinkActive="nav_list_item-selected">
-        <a class="nav_list_link" routerLink="/profile">Perfil</a>
+        <!-- <a class="nav_list_link" routerLink="/profile">Perfil</a> -->
+        <a class="nav_list_link" routerLink="/profile/{{idAuthor}}">Perfil</a>
       </li>
     </ul>
   </nav>

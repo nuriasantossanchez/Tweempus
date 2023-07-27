@@ -9,9 +9,76 @@
       "id": "2",
       "fullName": "David Teitelbaum",
       "image": "https://randomuser.me/api/portraits/men/82.jpg"
+    },
+    {
+      "id": "4",
+      "fullName": "sfgdag",
+      "image": ""
+    },
+    {
+      "id": "ass",
+      "fullName": "ass",
+      "image": ""
     }
   ],
-  "authenticated": [],
+  "authenticated": [
+    {
+      "id": "Fz4rD1690488270814",
+      "author": "ass"
+    },
+    {
+      "id": "Ma5U51690489382888",
+      "author": "1"
+    },
+    {
+      "id": "cKpfM1690489413318",
+      "author": "1"
+    },
+    {
+      "id": "bfveH1690489660116",
+      "author": "1"
+    },
+    {
+      "id": "HLqfn1690489841713",
+      "author": "1"
+    },
+    {
+      "id": "dKtWw1690490443046",
+      "author": "1"
+    },
+    {
+      "id": "fjiXW1690491791528",
+      "author": "1"
+    },
+    {
+      "id": "HgyzS1690491885708",
+      "author": "1"
+    },
+    {
+      "id": "iXXHl1690492115089",
+      "author": "1"
+    },
+    {
+      "id": "FUyDK1690492279276",
+      "author": "1"
+    },
+    {
+      "id": "2EItJ1690492480381",
+      "author": "1"
+    },
+    {
+      "id": "joi871690492633920",
+      "author": "1"
+    },
+    {
+      "id": "Ndwcn1690492868616",
+      "author": "1"
+    },
+    {
+      "id": "xvT651690493171725",
+      "author": "1"
+    }
+  ],
   "twimps": [
     {
       "id": "Mx5Cf1483389903318",
@@ -26,6 +93,34 @@
       "by": "David Teitelbaum",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur sodales libero, sit amet posuere arcu consectetur ut. Nam volutpat ligula ac nunc consectetur vestibulum.",
       "timestamp": "01-01-2023"
+    },
+    {
+      "id": "2",
+      "author": "1",
+      "by": "Author",
+      "content": "111",
+      "timestamp": "27-07-2023"
+    },
+    {
+      "id": "3",
+      "author": "1",
+      "by": "Author",
+      "content": "hola mundo",
+      "timestamp": "27-07-2023"
+    },
+    {
+      "id": "4",
+      "author": "1",
+      "by": "Author",
+      "content": "dsdfs",
+      "timestamp": "27-07-2023"
+    },
+    {
+      "id": "5",
+      "author": "1",
+      "by": "Author",
+      "content": "aaa",
+      "timestamp": "27-07-2023"
     }
   ],
   "author-favorites": [
@@ -40,6 +135,14 @@
       "twimps": [
         "Mx5Cf1483389903318"
       ]
+    },
+    {
+      "id": "4",
+      "twimps": []
+    },
+    {
+      "id": "ass",
+      "twimps": []
     }
   ],
   "author-twimps": [

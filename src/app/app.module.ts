@@ -8,6 +8,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { LoginModule } from './login/login.module';
 import { ProfileModule } from './profile/profile.module';
 import { ErrorModule } from './error/error.module';
+import { CreateTwimpModule } from './create-twimp/create-twimp.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import { ErrorModule } from './error/error.module';
     DashboardModule,
     ProfileModule,
     ErrorModule,
+    CreateTwimpModule
   ],
 })
 export class AppModule {}

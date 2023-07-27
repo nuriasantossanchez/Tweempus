@@ -5,12 +5,17 @@ import { catchError, map } from 'rxjs/operators';
 import { Twimp } from './twimp.model';
 import { Author } from '../author/author.model';
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
   providedIn: 'root',
 })
 export class TwimpService {
-  private url: string = 'http://localhost:3000/twimps';
-  private urlFavorite: string = 'http://localhost:3000/author-favorites';
+  // private url: string = 'http://localhost:3000/twimps';
+  // private urlFavorite: string = 'http://localhost:3000/author-favorites';
+
+  private url: string = environment.url + 'twimps';
+  private urlFavorite: string = environment.url + 'author-favorites';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -32,6 +37,37 @@ export class TwimpService {
         }
         return twimps;
       }),
+      catchError(this.handleError)
+    );
+  }
+
+  getAuthorTwimps(idAuthor: string): Observable<Twimp[]> {
+    let twimps: Twimp[] = [];
+
+    return this.httpClient.get(this.url).pipe(
+      map((dbTwimpList: any) => {
+        for (let i in dbTwimpList) {
+          if (dbTwimpList[i].author === idAuthor) {
+            let twimp: Twimp = new Twimp(dbTwimpList[i].id, 'localhost:4200/twimp/' + dbTwimpList[i].id, new Author(dbTwimpList[i].author), dbTwimpList[i].content, dbTwimpList[i].timestamp);
+            twimps.push(twimp);
+          }
+        }
+        return twimps;
+      }),
+      catchError(this.handleError)
+    );
+  }
+
+  setTwimp(twimp:Twimp):Observable<any>{
+    let dbTwimp:any = {
+      'id':twimp.id,
+      'author':twimp.author.id,
+      'by':twimp.author.fullName,
+      'content':twimp.content,
+      'timestamp':twimp.timestamp
+    };
+
+    return this.httpClient.post(this.url,dbTwimp).pipe(
       catchError(this.handleError)
     );
   }

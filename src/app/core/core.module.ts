@@ -9,8 +9,8 @@ import { AuthenticationService } from './authentication.service';
 
 
 @NgModule({
+  imports: [CommonModule, RouterModule, HttpClientModule],
   declarations: [HeaderComponent, NavComponent],
-  imports: [CommonModule, RouterModule, HttpClientModule] ,
   providers: [AuthGuardService, AuthenticationService],
   exports: [HeaderComponent, NavComponent],
 })
